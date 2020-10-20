@@ -3,13 +3,13 @@
  * - receives a name
  * - logs "Hello <name>"
  *
+ /*
  * e.g.
  * greet("Michael") logs "Hello Michael"
  */
 function greet(name) {
-  // Your code here
+console.log (`Hello ${name}`)
 }
-
 /**
  * isOdd(n):
  * - receives a number n
@@ -20,7 +20,8 @@ function greet(name) {
  * isOdd(10) -> false
  */
 function isOdd(n) {
-  // Your code here
+if (n %2 === 1) {return true;}
+else {console.log("False")} 
 }
 
 /**
@@ -33,7 +34,9 @@ function isOdd(n) {
  * oddsSmallerThan(15) -> 7
  */
 function oddsSmallerThan(n) {
-  // Your code here
+  if (isOdd(n)) 
+  return (n - 1) / 2; 
+  else return n / 2;
 }
 
 /**
@@ -47,7 +50,8 @@ function oddsSmallerThan(n) {
  * squareOrDouble(9) -> 81
  */
 function squareOrDouble(n) {
-  // Your code here
+if (isOdd(n)) return n * n ; 
+else return n * 2;
 }
 
 module.exports = { greet, isOdd, oddsSmallerThan, squareOrDouble };
